@@ -356,7 +356,7 @@
   tab-size: 4 !important;
   white-space: pre !important;
   word-wrap: normal !important;
-  overflow: hidden !important;
+  overflow: auto !important;
   background: transparent !important;
   box-sizing: border-box !important;
   z-index: 2;
@@ -413,6 +413,7 @@
   pointer-events: none;
   z-index: 3;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .line-number-item {
@@ -612,5 +613,32 @@
 
   .ide-section {
     padding: 40px 10px;
+  }
+}
+
+/* Landscape and Short Screens Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .ide-window {
+    height: 85vh;
+    min-height: 250px;
+  }
+
+  .ide-section {
+    padding: 20px 5%;
+  }
+
+  .ide-terminal {
+    height: 80px;
+  }
+
+  .ide-textarea,
+  .ide-pre,
+  .line-numbers-sidebar {
+    font-size: 12px !important;
+    line-height: 18px !important;
+  }
+
+  .line-number-item {
+    height: 18px;
   }
 }

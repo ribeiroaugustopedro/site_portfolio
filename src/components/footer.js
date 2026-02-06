@@ -14,9 +14,24 @@ export function renderFooter(lang, translations) {
 
     const leftContainer = document.createElement('div');
     leftContainer.style.display = 'flex';
-    leftContainer.style.gap = '15px';
-    leftContainer.style.position = 'absolute';
-    leftContainer.style.left = '40px'; // Matching site's horizontal padding/logo alignment
+    leftContainer.style.gap = '20px';
+    leftContainer.style.marginBottom = '15px'; // Space below icons on mobile
+    
+    // Check if we are on wide screens to potentially keep them side-by-side or stacked
+    const updateFooterLayout = () => {
+        if (window.innerWidth <= 768) {
+            footer.style.flexDirection = 'column';
+            leftContainer.style.position = 'static';
+            leftContainer.style.justifyContent = 'center';
+        } else {
+            footer.style.flexDirection = 'row';
+            leftContainer.style.position = 'absolute';
+            leftContainer.style.left = '40px';
+            leftContainer.style.marginBottom = '0';
+        }
+    };
+    window.addEventListener('resize', updateFooterLayout);
+    updateFooterLayout();
 
     const socialLinks = [
         {

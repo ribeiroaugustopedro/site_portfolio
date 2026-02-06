@@ -131,6 +131,7 @@ export function renderHero(lang, translations) {
   spacerBottom.style.flex = '1';
   section.appendChild(spacerBottom); // Push contact down
 
+  section.style.paddingBottom = '80px'; // Extra room for footer
   section.appendChild(contactContainer);
 
   return section;
