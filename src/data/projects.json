@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Databricks Data Warehouse",
+      "pt": "Data Warehouse no Databricks"
+    },
+    "description": {
+      "en": "Architected a Databricks-based Data Warehouse, migrating legacy Oracle workflows into scalable SQL logic. Built reliable data marts for CX, Sales, and Finance.",
+      "pt": "Arquitetei um Data Warehouse no Databricks, migrando fluxos legado Oracle para lógica SQL escalável. Construí data marts confiáveis para CX, Vendas e Finanças."
+    },
+    "tags": [
+      "SQL",
+      "Databricks",
+      "Data Modeling",
+      "ETL"
+    ],
+    "link": "#",
+    "highlight": true
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Geospatial Expansion Planner",
+      "pt": "Planejador de Expansão Geoespacial"
+    },
+    "description": {
+      "en": "Interactive radius and cluster analysis tool using Streamlit and Folium, supporting strategic hospital expansion and regulatory reporting.",
+      "pt": "Ferramenta interativa de análise de raio e cluster usando Streamlit e Folium, apoiando a expansão estratégica hospitalar e relatórios regulatórios."
+    },
+    "tags": [
+      "Python",
+      "Streamlit",
+      "Folium",
+      "Geospatial"
+    ],
+    "link": "#",
+    "highlight": true
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "BI Governance Framework",
+      "pt": "Framework de Governança de BI"
+    },
+    "description": {
+      "en": "Restructured 50+ Power BI dashboards, establishing visual standards and naming conventions, reducing team maintenance effort by 50%.",
+      "pt": "Reestruturei mais de 50 dashboards Power BI, estabelecendo padrões visuais e convenções de nomenclatura, reduzindo o esforço de manutenção da equipe em 50%."
+    },
+    "tags": [
+      "Power BI",
+      "DAX",
+      "Governance"
+    ],
+    "link": "#",
+    "highlight": true
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Sales Commission Engine",
+      "pt": "Motor de Comissões de Vendas"
+    },
+    "description": {
+      "en": "Automated complex corporate sales commission calculations using Python (Polars/Pandas), eliminating manual operational errors.",
+      "pt": "Automatizei cálculos complexos de comissões de vendas corporativas usando Python (Polars/Pandas), eliminando erros operacionais manuais."
+    },
+    "tags": [
+      "Python",
+      "SQL",
+      "Automation"
+    ],
+    "link": "#",
+    "highlight": true
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Metropolitan Mobility Study",
+      "pt": "Estudo de Mobilidade Metropolitana"
+    },
+    "description": {
+      "en": "Redesigned the Metropolitan Mobility Bulletin for SETRANS-RJ, including a COVID-19 impact study using Power Query.",
+      "pt": "Redesenhei o Boletim de Mobilidade Metropolitana para a SETRANS-RJ, incluindo um estudo de impacto da COVID-19 usando Power Query."
+    },
+    "tags": [
+      "Power BI",
+      "Excel",
+      "Data Analysis"
+    ],
+    "link": "#",
+    "highlight": false
+  },
+  {
+    "id": 6,
+    "title": {
+      "en": "GenieAI Team Integration",
+      "pt": "Integração GenieAI para Equipes"
+    },
+    "description": {
+      "en": "Integrated NLP models into internal systems and MS Teams, enabling automated query generation for non-technical stakeholders.",
+      "pt": "Integrei modelos de NLP em sistemas internos e MS Teams, permitindo a geração automatizada de consultas para stakeholders não técnicos."
+    },
+    "tags": [
+      "Python",
+      "NLP",
+      "Generative AI",
+      "Teams Integration"
+    ],
+    "link": "#",
+    "highlight": false
+  },
+  {
+    "id": 7,
+    "title": {
+      "en": "Legacy Modernization: Oracle to Cloud",
+      "pt": "Modernização de Legado: Oracle para Cloud"
+    },
+    "description": {
+      "en": "Modernized legacy Oracle-based workflows into modern data warehouse structures using AWS Glue and Databricks.",
+      "pt": "Modernizei fluxos de trabalho legados baseados em Oracle para estruturas modernas de data warehouse usando AWS Glue e Databricks."
+    },
+    "tags": [
+      "AWS Glue",
+      "Pyspark",
+      "Cloud",
+      "ETL"
+    ],
+    "link": "#",
+    "highlight": false
+  },
+  {
+    "id": 8,
+    "title": {
+      "en": "Operational ERP Structuring",
+      "pt": "Estruturação Operacional de ERP"
+    },
+    "description": {
+      "en": "Structured medical professional and procedure registration rules to streamline ERP data input and organizational transparency.",
+      "pt": "Estruturei regras de cadastro de profissionais médicos e procedimentos para otimizar a entrada de dados no ERP e a transparência organizacional."
+    },
+    "tags": [
+      "Excel",
+      "Data Modeling",
+      "Data Analysis"
+    ],
+    "link": "#",
+    "highlight": false
+  }
+]
