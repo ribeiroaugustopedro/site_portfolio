@@ -17,16 +17,18 @@
   --spacing-xl: 64px;
 
   --transition-speed: 0.3s;
-  --rainbow-gradient: linear-gradient(90deg,
-      #ff0000,
-      #ff8c00,
-      #ffd700,
-      #00ff00,
-      #00ffff,
-      #0000ff,
-      #8a2be2,
-      #ff00ff,
-      #ff0000);
+  --rainbow-gradient: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff8c00,
+    #ffd700,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8a2be2,
+    #ff00ff,
+    #ff0000
+  );
 
   --nav-bg: rgba(13, 17, 23, 0.85);
 
@@ -63,9 +65,16 @@ body {
   background-color: var(--bg-color);
   background-image:
     radial-gradient(at 0% 0%, rgba(100, 255, 218, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(138, 43, 226, 0.05) 0px, transparent 50%),
+    radial-gradient(
+      at 100% 100%,
+      rgba(138, 43, 226, 0.05) 0px,
+      transparent 50%
+    ),
     var(--bg-pattern);
-  background-size: 100% 100%, 100% 100%, var(--bg-pattern-size);
+  background-size:
+    100% 100%,
+    100% 100%,
+    var(--bg-pattern-size);
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
@@ -110,6 +119,12 @@ button {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg); /* Increased from md (16px) to lg (32px) for more room */
+  }
+}
+
 .section {
   min-height: 100vh;
   display: flex;
@@ -130,7 +145,8 @@ button {
 .reveal {
   opacity: 0;
   transform: translateY(50px) scale(0.95);
-  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1),
+  transition:
+    opacity 1s cubic-bezier(0.23, 1, 0.32, 1),
     transform 1s cubic-bezier(0.23, 1, 0.32, 1);
   will-change: transform, opacity;
 }
@@ -141,48 +157,49 @@ button {
 }
 
 /* Staggered Children Logic */
-.stagger-reveal>* {
+.stagger-reveal > * {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
     transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Works if the stagger-reveal itself is revealed OR if it's inside a revealed parent */
-.reveal-visible .stagger-reveal>*,
-.stagger-reveal.reveal-visible>* {
+.reveal-visible .stagger-reveal > *,
+.stagger-reveal.reveal-visible > * {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Generate staggered delays */
-.reveal-visible .stagger-reveal>*:nth-child(1),
-.stagger-reveal.reveal-visible>*:nth-child(1) {
+.reveal-visible .stagger-reveal > *:nth-child(1),
+.stagger-reveal.reveal-visible > *:nth-child(1) {
   transition-delay: 0.1s;
 }
 
-.reveal-visible .stagger-reveal>*:nth-child(2),
-.stagger-reveal.reveal-visible>*:nth-child(2) {
+.reveal-visible .stagger-reveal > *:nth-child(2),
+.stagger-reveal.reveal-visible > *:nth-child(2) {
   transition-delay: 0.2s;
 }
 
-.reveal-visible .stagger-reveal>*:nth-child(3),
-.stagger-reveal.reveal-visible>*:nth-child(3) {
+.reveal-visible .stagger-reveal > *:nth-child(3),
+.stagger-reveal.reveal-visible > *:nth-child(3) {
   transition-delay: 0.3s;
 }
 
-.reveal-visible .stagger-reveal>*:nth-child(4),
-.stagger-reveal.reveal-visible>*:nth-child(4) {
+.reveal-visible .stagger-reveal > *:nth-child(4),
+.stagger-reveal.reveal-visible > *:nth-child(4) {
   transition-delay: 0.4s;
 }
 
-.reveal-visible .stagger-reveal>*:nth-child(5),
-.stagger-reveal.reveal-visible>*:nth-child(5) {
+.reveal-visible .stagger-reveal > *:nth-child(5),
+.stagger-reveal.reveal-visible > *:nth-child(5) {
   transition-delay: 0.5s;
 }
 
-.reveal-visible .stagger-reveal>*:nth-child(6),
-.stagger-reveal.reveal-visible>*:nth-child(6) {
+.reveal-visible .stagger-reveal > *:nth-child(6),
+.stagger-reveal.reveal-visible > *:nth-child(6) {
   transition-delay: 0.6s;
 }
 
@@ -214,22 +231,24 @@ button {
 }
 
 .rainbow-border::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg,
-      #ff0000,
-      #ff8c00,
-      #ffd700,
-      #00ff00,
-      #00ffff,
-      #0000ff,
-      #8a2be2,
-      #ff00ff,
-      #ff0000);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff8c00,
+    #ffd700,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8a2be2,
+    #ff00ff,
+    #ff0000
+  );
   background-size: 400% 400%;
   border-radius: 8px;
   z-index: -1;
@@ -274,7 +293,7 @@ button {
 }
 
 .rainbow-border-left::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -292,21 +311,23 @@ a {
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg,
-      #ff0000,
-      #ff8c00,
-      #ffd700,
-      #00ff00,
-      #00ffff,
-      #0000ff,
-      #8a2be2,
-      #ff00ff);
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff8c00,
+    #ffd700,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8a2be2,
+    #ff00ff
+  );
   background-size: 200% 100%;
   transition: width 0.3s ease;
   animation: rainbowSlide 3s linear infinite;
@@ -337,7 +358,6 @@ a:hover {
 }
 
 @keyframes rainbowGlow {
-
   0%,
   100% {
     text-shadow:
@@ -373,5 +393,164 @@ a:hover {
     text-shadow:
       0 0 10px rgba(255, 0, 255, 0.5),
       0 0 20px rgba(255, 0, 255, 0.3);
+  }
+}
+
+/* Project Cards */
+.project-card {
+  padding: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Resume & Skills */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.resume-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-item {
+  margin-bottom: 24px;
+}
+
+.resume-item h4 {
+  margin-bottom: 4px;
+}
+
+.resume-item .company {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-family: var(--font-mono);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.skill-group {
+  margin-bottom: 32px;
+}
+
+.skill-group .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.skill-group .tag {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Navbar & Responsive Tweaks */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 101;
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* We will give the <ul> a class 'nav-menu' in JS */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 40px !important;
+    transition: 0.3s ease;
+    z-index: 100;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Section padding adjustments for mobile */
+  .section {
+    padding: var(--spacing-xl) 0; /* More padding between sections */
+  }
+
+  h1,
+  .section-title {
+    font-size: 2rem !important;
+    margin-bottom: var(--spacing-lg) !important;
+  }
+
+  /* Resume specific mobile refinements */
+  .resume-grid {
+    gap: 40px !important;
+  }
+
+  .resume-item {
+    margin-bottom: 30px !important;
+  }
+
+  .resume-item p {
+    margin-top: 10px;
+    line-height: 1.6;
   }
 }

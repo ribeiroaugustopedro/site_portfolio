@@ -85,7 +85,10 @@ export function renderNavbar(lang, translations) {
 
   leftContainer.appendChild(langToggle);
 
+  nav.appendChild(leftContainer);
+
   const ul = document.createElement('ul');
+  ul.className = 'nav-menu'; // Added class for mobile styles
   ul.style.display = 'flex';
   ul.style.gap = '30px';
   ul.style.listStyle = 'none';
@@ -104,12 +107,39 @@ export function renderNavbar(lang, translations) {
     a.textContent = link.name;
     a.style.fontSize = '0.9rem';
     a.style.fontFamily = 'var(--font-mono)';
+    
+    // Close menu on link click (for mobile)
+    a.addEventListener('click', () => {
+      ul.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+
     li.appendChild(a);
     ul.appendChild(li);
   });
 
-  nav.appendChild(leftContainer);
+  // Hamburger Button for Mobile
+  const hamburger = document.createElement('button');
+  hamburger.className = 'hamburger';
+  hamburger.innerHTML = '<span></span><span></span><span></span>';
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    ul.classList.toggle('active');
+  });
+
   nav.appendChild(ul);
+  nav.appendChild(hamburger);
+
+  // Responsive padding adjustment in JS for the nav itself
+  const updateNavPadding = () => {
+    if (window.innerWidth <= 768) {
+      nav.style.padding = '15px 20px';
+    } else {
+      nav.style.padding = '20px 40px';
+    }
+  };
+  window.addEventListener('resize', updateNavPadding);
+  updateNavPadding();
 
   return nav;
 }

@@ -2,17 +2,15 @@ export function renderResume(lang, translations) {
   const section = document.createElement('section');
   section.className = 'section container reveal';
   section.id = 'resume';
-  section.style.maxWidth = '800px';
+  section.style.maxWidth = '900px'; // Increased slightly for breathing room
 
   const h2 = document.createElement('h2');
   h2.textContent = translations[lang].resume.title;
   h2.className = 'rainbow-border-left';
-  h2.style.marginBottom = '32px';
+  h2.style.marginBottom = '40px';
 
   const content = document.createElement('div');
-  content.style.lineHeight = '1.8';
-  content.style.fontSize = '1.1rem';
-  content.style.color = 'var(--text-secondary)';
+  content.className = 'resume-container';
 
   // Left Column: Experience & Education
   const leftCol = document.createElement('div');
@@ -20,7 +18,7 @@ export function renderResume(lang, translations) {
 
   // Experience
   const expSection = document.createElement('div');
-  expSection.innerHTML = `<h3>${translations[lang].resume.experienceTitle}</h3>`;
+  expSection.innerHTML = `<h3 style="margin-bottom: 24px;">${translations[lang].resume.experienceTitle}</h3>`;
 
   translations[lang].resume.experiences.forEach(job => {
     const item = document.createElement('div');
@@ -35,8 +33,8 @@ export function renderResume(lang, translations) {
 
   // Education
   const eduSection = document.createElement('div');
-  eduSection.style.marginTop = '40px';
-  eduSection.innerHTML = `<h3>${translations[lang].resume.educationTitle}</h3>`;
+  eduSection.style.marginTop = '48px';
+  eduSection.innerHTML = `<h3 style="margin-bottom: 24px;">${translations[lang].resume.educationTitle}</h3>`;
 
   translations[lang].resume.education.forEach(edu => {
     const item = document.createElement('div');
@@ -61,7 +59,7 @@ export function renderResume(lang, translations) {
     { category: translations[lang].resume.skillCategories.cloud, items: ['Azure', 'AWS', 'Oracle', 'PostgreSQL'] }
   ];
 
-  rightCol.innerHTML = `<h3>${translations[lang].resume.skillsTitle}</h3>`;
+  rightCol.innerHTML = `<h3 style="margin-bottom: 24px;">${translations[lang].resume.skillsTitle}</h3>`;
 
   skillsConfig.forEach(skillSet => {
     const group = document.createElement('div');
@@ -77,22 +75,14 @@ export function renderResume(lang, translations) {
 
   // Download Button
   const btnContainer = document.createElement('div');
-  btnContainer.style.marginTop = '40px';
-  btnContainer.innerHTML = `<a href="#" class="btn-primary">${translations[lang].resume.downloadResume}</a>`;
+  btnContainer.style.marginTop = '32px';
+  btnContainer.innerHTML = `<a href="#" class="btn-primary" style="display: inline-block; padding: 12px 24px; border: 1px solid var(--accent-color); color: var(--accent-color); border-radius: 4px; font-weight: bold;">${translations[lang].resume.downloadResume}</a>`;
   rightCol.appendChild(btnContainer);
 
   const grid = document.createElement('div');
   grid.className = 'resume-grid';
   grid.appendChild(leftCol);
   grid.appendChild(rightCol);
-
-  content.innerHTML = ''; // Clear previous content container usage or repurpose it
-  // Actually, the structure in the file is h2 then content div with innerHTML.
-  // I should append grid to content instead or replacing content.innerHTML.
-
-  // Let's replace the whole content.innerHTML assignment and instead build the structure.
-  // The original code sets content.innerHTML to a big string.
-  // I will replace that block with the logic that builds 'grid' and appends it.
 
   content.appendChild(grid);
 
