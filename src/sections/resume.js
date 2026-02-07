@@ -8,7 +8,8 @@ export function renderResume(lang, translations) {
 
   const h2 = document.createElement('h2');
   h2.textContent = t.title;
-  h2.className = 'rainbow-border-left';
+  h2.style.borderLeft = '4px solid var(--border-color)';
+  h2.style.paddingLeft = '16px';
   h2.style.marginBottom = '40px';
 
   const content = document.createElement('div');
@@ -18,11 +19,10 @@ export function renderResume(lang, translations) {
   const summaryBox = document.createElement('div');
   summaryBox.style.marginBottom = '48px';
   summaryBox.className = 'project-card'; // Reuse card style for consistency
-  summaryBox.style.borderLeft = '4px solid';
-  summaryBox.style.borderImage = 'var(--rainbow-gradient) 1';
+  summaryBox.style.borderLeft = '4px solid var(--border-color)';
 
   summaryBox.innerHTML = `
-    <h3 class="rainbow-text" style="margin-bottom: 16px; display: inline-block;">${t.summaryTitle}</h3>
+    <h3 style="margin-bottom: 16px; display: inline-block; color: var(--text-primary);">${t.summaryTitle}</h3>
     <p style="font-size: 1rem; color: var(--text-primary);">${t.summary}</p>
   `;
   content.appendChild(summaryBox);
@@ -44,8 +44,8 @@ export function renderResume(lang, translations) {
     const item = document.createElement('div');
     item.className = 'resume-item';
     item.innerHTML = `
-      <h4 style="color: var(--text-primary); font-size: 1.1rem;">${job.role}</h4>
-      <span class="company" style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.9rem; margin-bottom: 8px; display: block;">${job.company} | ${job.period}</span>
+      <h4>${job.role}</h4>
+      <span class="company">${job.company} | ${job.period}</span>
       <p style="color: var(--text-secondary); font-size: 0.95rem;">${job.description}</p>
     `;
     expSection.appendChild(item);
@@ -60,8 +60,8 @@ export function renderResume(lang, translations) {
     const item = document.createElement('div');
     item.className = 'resume-item';
     item.innerHTML = `
-      <h4 style="color: var(--text-primary); font-size: 1.1rem;">${edu.degree}</h4>
-      <span class="company" style="font-family: var(--font-mono); color: var(--accent-color); font-size: 0.9rem;">${edu.school} | ${edu.period}</span>
+      <h4>${edu.degree}</h4>
+      <span class="company">${edu.school} | ${edu.period}</span>
     `;
     eduSection.appendChild(item);
   });
@@ -140,7 +140,7 @@ export function renderResume(lang, translations) {
 
     li.innerHTML = `
       <span style="color: var(--text-primary); font-weight: 500;">${name}</span>
-      <span class="rainbow-text" style="font-family: var(--font-mono); font-size: 0.8rem;">${level}</span>
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">${level}</span>
     `;
     langList.appendChild(li);
   });
@@ -150,18 +150,18 @@ export function renderResume(lang, translations) {
   // Download Button
   const btnContainer = document.createElement('div');
   btnContainer.style.marginTop = '48px';
-  // Using a cleaner approach for the button to have rainbow border and text
-  btnContainer.innerHTML = `<a href="cv_pedro_augusto_ribeiro_en-us.txt" download class="btn-primary rainbow-text" style="display: inline-block; padding: 12px 24px; border: 2px solid; border-image: var(--rainbow-gradient) 1; border-radius: 4px; font-weight: bold; text-align: center; width: 100%; transition: all 0.3s ease; text-decoration: none;">${t.downloadResume}</a>`;
+  btnContainer.innerHTML = `
+    <a href="cv_pedro_augusto_ribeiro_en-us.txt" download class="btn-primary" 
+       style="display: inline-block; padding: 12px 24px; border: 2px solid var(--text-primary); border-radius: 4px; font-weight: bold; text-align: center; width: 100%; transition: all 0.3s ease; text-decoration: none; color: var(--text-primary); font-family: var(--font-mono);">
+      ${t.downloadResume}
+    </a>
+  `;
 
-  // Add hover effect via JS since it's inline logic or rely on CSS class if exists. 
-  // Ideally rely on CSS, but inline styles overwrite. 
-  // Let's make it a clean class usage if possible, but kept inline for safety as per original pattern.
-  btnContainer.querySelector('a').addEventListener('mouseenter', (e) => {
-    e.target.style.background = 'linear-gradient(90deg, rgba(255, 0, 0, 0.1), rgba(0, 255, 0, 0.1), rgba(0, 0, 255, 0.1))';
-    e.target.style.backgroundSize = '200% 200%';
-    e.target.style.animation = 'rainbowSlide 2s linear infinite';
+  const btn = btnContainer.querySelector('a');
+  btn.addEventListener('mouseenter', (e) => {
+    e.target.style.background = 'rgba(255, 255, 255, 0.05)';
   });
-  btnContainer.querySelector('a').addEventListener('mouseleave', (e) => {
+  btn.addEventListener('mouseleave', (e) => {
     e.target.style.background = 'transparent';
   });
 

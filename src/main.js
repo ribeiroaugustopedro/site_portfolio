@@ -7,7 +7,6 @@ import { renderHighlights } from './sections/highlights.js';
 import { renderProjects } from './sections/projects.js';
 import { renderIDE } from './sections/playgroud.js';
 import { renderResume } from './sections/resume.js';
-// import { renderContact } from './sections/contact.js'; // Removed
 import { renderFooter } from './components/footer.js';
 import { renderBackToTop } from './components/backToTop.js';
 import projectsData from './data/projects.json';
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     main.appendChild(renderProjects(projectsData, lang, translations));
     main.appendChild(renderResume(lang, translations));
     main.appendChild(renderIDE());
-    // main.appendChild(renderContact()); // Removed, integrated into Hero
     app.appendChild(main);
     app.appendChild(renderFooter(lang, translations));
     app.appendChild(renderBackToTop());

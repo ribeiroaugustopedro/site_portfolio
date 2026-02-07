@@ -423,19 +423,23 @@ a:hover {
 
 .resume-item h4 {
   margin-bottom: 4px;
+  color: #ffffff;
+  /* Roles in Pure White */
 }
 
 .resume-item .company {
   font-size: 0.9rem;
-  background: var(--rainbow-gradient);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowSlide 4s linear infinite;
+  color: var(--text-primary);
+  /* Subtitles in Ice Grey */
+  font-weight: 400;
   font-family: var(--font-mono);
   display: block;
   margin-bottom: 12px;
+}
+
+.resume-item p {
+  color: var(--text-secondary);
+  /* Description in Dim Grey */
 }
 
 .skill-group {

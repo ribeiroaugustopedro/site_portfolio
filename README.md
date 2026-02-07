@@ -1,37 +1,34 @@
-# Developer Portfolio
+# Pedro Augusto Ribeiro - Portfolio
 
-A clean, elegant, and professional developer portfolio website inspired by Antigravity, built with Vite, Vanilla JavaScript, and Three.js.
+A clean, elegant, and professional developer portfolio website.
+
+**Live at: [paribeiro.com](https://paribeiro.com)**
 
 ## Features
 
 - **Minimalist Dark Mode Design**
 - **Three.js Particle Background**
-- **Smooth Page Transitions**
+- **Round Language & Theme Toggles**
 - **JSON-based Project Management**
 - **Responsive Layout**
+- **Automatic Deployment** via GitHub Actions
 
-## Project Structure
+## Deployment & Workflow
 
-```
-/src
-  /three        # Three.js background scene
-  /components   # Reusable UI components (Navbar, Cards)
-  /sections     # Page sections (Hero, Projects, Contact)
-  /data         # Data files (projects.json)
-  style.css     # Global styles and variables
-  main.js       # Entry point
-```
+The project is hosted on GitHub Pages with a custom domain.
 
-## How to Run
+1.  **Work**: Make changes in the `main` branch.
+2.  **Commit**: Use descriptive commit messages.
+3.  **Deploy**: Simply `git push origin main`. GitHub Actions will automatically build the project and deploy it to the `gh-pages` branch.
+
+## How to Run Locally
 
 1. **Install Dependencies**
-
    ```bash
    npm install
    ```
 
 2. **Run Development Server**
-
    ```bash
    npm run dev
    ```
@@ -40,12 +37,6 @@ A clean, elegant, and professional developer portfolio website inspired by Antig
    ```bash
    npm run build
    ```
-
-## Customization
-
-- **Projects**: Edit `src/data/projects.json` to add your own projects.
-- **Colors & Fonts**: Edit `src/style.css` CSS variables.
-- **Content**: Update text in `src/sections/*.js`.
 
 ## Tech Stack
 

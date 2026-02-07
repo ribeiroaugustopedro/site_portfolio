@@ -18,6 +18,7 @@ export function renderNavbar(lang, translations) {
 
   const logo = document.createElement('div');
   logo.textContent = 'PEDRO AUGUSTO RIBEIRO';
+  logo.className = 'rainbow-text'; // Highlight name with rainbow effect
   logo.style.fontFamily = 'var(--font-mono)';
   logo.style.fontWeight = 'bold';
   logo.style.fontSize = '1.2rem';
@@ -60,23 +61,29 @@ export function renderNavbar(lang, translations) {
   const currentLang = localStorage.getItem('lang') || 'pt';
   langToggle.textContent = currentLang === 'pt' ? 'BR' : 'EN';
   langToggle.style.color = 'var(--text-primary)';
-  langToggle.style.padding = '8px 12px';
-  langToggle.style.borderRadius = '4px';
-  langToggle.style.marginLeft = '10px';
-  langToggle.style.border = '1px solid var(--border-color)';
+  langToggle.style.padding = '8px';
+  langToggle.style.borderRadius = '50%';
+  langToggle.style.width = '40px';
+  langToggle.style.height = '40px';
+  langToggle.style.display = 'flex';
+  langToggle.style.alignItems = 'center';
+  langToggle.style.justifyContent = 'center';
   langToggle.style.backgroundColor = 'transparent';
+  langToggle.style.border = 'none';
   langToggle.style.cursor = 'pointer';
   langToggle.style.fontFamily = 'var(--font-mono)';
-  langToggle.style.transition = 'all 0.3s ease';
+  langToggle.style.fontSize = '0.9rem';
+  langToggle.style.fontWeight = 'bold';
+  langToggle.style.transition = 'background 0.3s ease';
   langToggle.title = 'Switch Language';
 
   langToggle.addEventListener('mouseenter', () => {
-    langToggle.style.borderColor = 'var(--accent-color)';
-    langToggle.style.color = 'var(--accent-color)';
+    langToggle.style.background = 'linear-gradient(90deg, rgba(255, 0, 0, 0.1), rgba(0, 255, 0, 0.1), rgba(0, 0, 255, 0.1))';
+    langToggle.style.backgroundSize = '200% 200%';
+    langToggle.style.animation = 'rainbowSlide 2s linear infinite';
   });
   langToggle.addEventListener('mouseleave', () => {
-    langToggle.style.borderColor = 'var(--border-color)';
-    langToggle.style.color = 'var(--text-primary)';
+    langToggle.style.background = 'transparent';
   });
 
   langToggle.addEventListener('click', () => {
