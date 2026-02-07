@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/site_portfolio/', // Matches the repository name
+  base: '/', // Changed for custom domain paribeiro.com
   build: {
     outDir: 'dist',
   }
