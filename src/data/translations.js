@@ -3,7 +3,7 @@ export const translations = {
         hero: {
             titlePre: 'Transformando Dados Brutos em',
             titleHighlight: 'Inteligência de Negócios',
-            description: 'Olá, sou <strong>Pedro Augusto Ribeiro</strong>, um Engenheiro de Analytics Pleno especializado na construção de pipelines ETL escaláveis e ecossistemas de BI de alto impacto.',
+            description: 'Olá, sou <strong>Pedro Augusto Ribeiro</strong>, um Profissional de Dados Multidisciplinar especializado na construção de pipelines ETL escaláveis e ecossistemas de BI de alto impacto.',
             ctaWork: 'Ver Meus Trabalhos',
             ctaPlayground: 'Testar Playground',
             contactTitle: 'Entre em Contato'
@@ -23,47 +23,83 @@ export const translations = {
         },
         resume: {
             title: 'Currículo & Habilidades',
+            downloadResume: 'Baixar Currículo Completo',
+            summaryTitle: 'Resumo Profissional',
             experienceTitle: 'Experiência Profissional',
             educationTitle: 'Formação Acadêmica',
             skillsTitle: 'Habilidades Técnicas',
-            downloadResume: 'Baixar Currículo Completo',
+            certificationsTitle: 'Certificações',
+            languagesTitle: 'Idiomas',
+            summary: 'Profissional de Dados Multidisciplinar com trajetória desde automação básica em Excel/CSV até desenvolvimento avançado em Python/SQL e estruturação de pipelines em ambientes cloud. Tornou-se um líder de analytics de nível pleno e contribuidor chave para projetos de alto impacto. Forte habilidade para entender e reconstruir processos manuais, traduzindo lógica de negócios em soluções de dados escaláveis usando SQL, Python e Power BI. Atualmente supervisiona padrões de BI e documentação, mentora analistas e apoia projetos interfuncionais com a liderança executiva.',
             experiences: [
                 {
                     role: 'Engenheiro de Analytics Pleno',
-                    company: 'Dasa',
-                    period: 'Abr 2024 - Presente',
-                    description: 'Liderando a migração do Data Warehouse para Databricks e padronizando a governança de BI para mais de 50 dashboards corporativos.'
+                    company: 'Leve Saúde',
+                    period: 'Jul 2023 – Presente',
+                    description: 'Rapidamente promovido de estagiário para engenheiro de dados pleno. Liderou a reestruturação de mais de 50 dashboards Power BI. Colaborou na construção do Data Warehouse baseado em Databricks. Desenvolve dashboards geoespaciais interativos usando Streamlit e Folium.'
                 },
                 {
-                    role: 'Analista de Planejamento Sênior',
-                    company: 'Dasa',
-                    period: 'Ago 2022 - Mar 2024',
-                    description: 'Desenvolvi modelos de expansão geoespacial usando Python e automatizei o cálculo de comissões de vendas, reduzindo erros em 100%.'
+                    role: 'Analista de Dados (Freelance)',
+                    company: 'Neurovida',
+                    period: 'Fev 2023 – Jul 2023',
+                    description: 'Auxiliou o diretor médico na estruturação de regras de negócios. Suportou o cadastro e organização de profissionais médicos e procedimentos. Transformou lógica de saúde complexa em modelos estruturados.'
                 },
                 {
-                    role: 'Analista de Planejamento Pleno',
-                    company: 'Lalamove',
-                    period: 'Out 2021 - Ago 2022',
-                    description: 'Otimizei a alocação de frota usando análise de dados e dashboards em tempo real para operações logísticas.'
+                    role: 'Analista de Dados',
+                    company: 'SETRANS-RJ',
+                    period: 'Fev 2022 – Jan 2023',
+                    description: 'Desenvolveu dashboards Excel para dados de transporte. Liderou a reformulação do Boletim de Mobilidade Metropolitana. Reconhecido pela liderança pela iniciativa técnica.'
+                },
+                {
+                    role: 'Suporte de TI (Freelance)',
+                    company: 'Rei do Queijo',
+                    period: 'Jan 2019 – Mar 2019',
+                    description: 'Montou e configurou 10 computadores desktop para operação de telemarketing. Otimizou a configuração básica de rede.'
+                },
+                {
+                    role: 'Desenhista CAD (Estagiário)',
+                    company: 'CASFS',
+                    period: 'Fev 2018 – Mai 2018',
+                    description: 'Auxiliou na revisão e desenho de plantas arquitetônicas 2D. Utilizou AutoCAD para criar representações escaladas de edifícios.'
                 }
             ],
             education: [
                 {
-                    degree: 'MBA em Data Science e Analytics',
-                    school: 'USP/Esalq',
-                    period: '2023 - 2025'
+                    degree: 'Engenharia de Produção',
+                    school: 'IBMR',
+                    period: '2020 – 2024'
                 },
                 {
-                    degree: 'Engenharia Civil',
-                    school: 'UFRJ',
-                    period: '2015 - 2020'
+                    degree: 'Engenharia de Produção',
+                    school: 'IBMEC',
+                    period: '2016 – 2018'
                 }
             ],
-            skillCategories: {
-                languages: 'Linguagens',
-                tools: 'Ferramentas',
-                cloud: 'Nuvem & DB'
-            }
+            skillCategories: [
+                { name: 'Linguagens e Consulta', items: ['Python', 'SQL (Databricks, Athena, DBeaver, SSMS)'] },
+                { name: 'BI e Visualização', items: ['Power BI', 'Streamlit', 'Excel', 'Seaborn', 'Plotly'] },
+                { name: 'Engenharia de Dados e ETL', items: ['Databricks', 'AWS Glue', 'Pandas', 'Pyspark'] },
+                { name: 'Automação e Scraping', items: ['Requests', 'Selenium', 'BeautifulSoup', 'OS'] },
+                { name: 'Cloud e Armazenamento', items: ['AWS S3', 'Azure', 'Oracle'] },
+                { name: 'Controle de Versão', items: ['GitHub', 'GitLab', 'Code Commit'] },
+                { name: 'Gestão de Projetos', items: ['Jira', 'Figma', 'Monday', 'Trello'] },
+                { name: 'Ferramentas Geoespaciais', items: ['Folium'] }
+            ],
+            certifications: [
+                'Cientista de Dados 4.0 | Data Science Academy (em andamento)',
+                'Lean Six Sigma Green Belt | FM2S',
+                'Data Science: Análise e Visualização de Dados | Alura',
+                'Pandas | Alura',
+                'Excel Impressionador | Hashtag Treinamentos',
+                'Modelagem de Banco de Dados | CEPERJ',
+                'Noções de Administração Pública | CEPERJ',
+                'Diretor de projetos empresa junior | IBMEC Soluções'
+            ],
+            languages: [
+                'Português | Nativo',
+                'Inglês | Avançado',
+                'Espanhol | Intermediário'
+            ]
         },
         footer: {
             rights: '&copy; 2026 <span class="rainbow-text" style="font-weight:bold;">Pedro Augusto Ribeiro</span>. Construído com Vite & Three.js.'
@@ -73,7 +109,7 @@ export const translations = {
         hero: {
             titlePre: 'Turning Raw Data Into',
             titleHighlight: 'Business Intelligence',
-            description: 'Hi, I am <strong>Pedro Augusto Ribeiro</strong>, a Mid-Level Analytics Engineer specialized in building scalable ETL pipelines and high-impact BI ecosystems.',
+            description: 'Hi, I am <strong>Pedro Augusto Ribeiro</strong>, a Multidisciplinary Data Professional specialized in building scalable ETL pipelines and high-impact BI ecosystems.',
             ctaWork: 'View My Work',
             ctaPlayground: 'Try Playground',
             contactTitle: 'Get In Touch'
@@ -93,47 +129,83 @@ export const translations = {
         },
         resume: {
             title: 'Resume & Skills',
-            experienceTitle: 'Professional Experience',
+            downloadResume: 'Download Full Resume',
+            summaryTitle: 'Professional Summary',
+            experienceTitle: 'Work Experience',
             educationTitle: 'Education',
             skillsTitle: 'Technical Skills',
-            downloadResume: 'Download Full Resume',
+            certificationsTitle: 'Certifications',
+            languagesTitle: 'Languages',
+            summary: 'Multidisciplinary Data Professional with a trajectory from basic Excel/CSV automation to advanced Python/SQL development and pipeline structuring in cloud environments. Became a mid-level analytics leader and key contributor to high-impact projects. Strong ability to understand and rebuild manual processes, translating business logic into scalable data solutions using SQL, Python and Power BI. Currently supervises BI standards and documentation, mentors analysts and supports cross-functional projects with the executive leadership.',
             experiences: [
                 {
                     role: 'Mid-Level Analytics Engineer',
-                    company: 'Dasa',
-                    period: 'Apr 2024 - Present',
-                    description: 'Leading Data Warehouse migration to Databricks and standardizing BI governance for 50+ corporate dashboards.'
+                    company: 'Leve Saúde',
+                    period: 'Jul 2023 – Present',
+                    description: 'Rapidly promoted from intern to mid-level data engineer. Led the restructuring of 50+ Power BI dashboards. Collaborated on Databricks Data Warehouse. Develops interactive geospatial dashboards using Streamlit and Folium.'
                 },
                 {
-                    role: 'Senior Planning Analyst',
-                    company: 'Dasa',
-                    period: 'Aug 2022 - Mar 2024',
-                    description: 'Developed geospatial expansion models using Python and automated sales commission calculations, reducing errors by 100%.'
+                    role: 'Data Analyst (Freelance)',
+                    company: 'Neurovida',
+                    period: 'Feb 2023 – Jul 2023',
+                    description: 'Assisted medical director in structuring business rules. Supported registration of medical professionals. Transformed complex healthcare logic into structured models.'
                 },
                 {
-                    role: 'Mid-Level Planning Analyst',
-                    company: 'Lalamove',
-                    period: 'Oct 2021 - Aug 2022',
-                    description: 'Optimized fleet allocation using data analysis and real-time dashboards for logistics operations.'
+                    role: 'Data Analyst',
+                    company: 'SETRANS-RJ',
+                    period: 'Feb 2022 – Jan 2023',
+                    description: 'Developed Excel dashboards for transportation data. Led redesign of Metropolitan Mobility Bulletin. Gained recognition for technical initiative.'
+                },
+                {
+                    role: 'IT Support (Freelance)',
+                    company: 'Rei do Queijo',
+                    period: 'Jan 2019 – Mar 2019',
+                    description: 'Assembled and configured 10 desktop computers for telemarketing. Optimized basic network setup.'
+                },
+                {
+                    role: 'CAD Drafter (Intern)',
+                    company: 'CASFS',
+                    period: 'Feb 2018 – May 2018',
+                    description: 'Assisted in drafting 2D architectural floor plans. Used AutoCAD to create scaled representations of buildings.'
                 }
             ],
             education: [
                 {
-                    degree: 'MBA in Data Science and Analytics',
-                    school: 'USP/Esalq',
-                    period: '2023 - 2025'
+                    degree: 'Production Engineering',
+                    school: 'IBMR',
+                    period: '2020 – 2024'
                 },
                 {
-                    degree: 'Civil Engineering',
-                    school: 'UFRJ',
-                    period: '2015 - 2020'
+                    degree: 'Production Engineering',
+                    school: 'IBMEC',
+                    period: '2016 – 2018'
                 }
             ],
-            skillCategories: {
-                languages: 'Languages',
-                tools: 'Tools',
-                cloud: 'Cloud & DB'
-            }
+            skillCategories: [
+                { name: 'Languages and querying', items: ['Python', 'SQL (Databricks, Athena, DBeaver, SSMS)'] },
+                { name: 'BI and Data Visualization', items: ['Power BI', 'Streamlit', 'Excel', 'Seaborn', 'Plotly'] },
+                { name: 'Data Engineering and ETL', items: ['Databricks', 'AWS Glue', 'Pandas', 'Pyspark'] },
+                { name: 'Automation and Scraping', items: ['Requests', 'Selenium', 'BeautifulSoup', 'OS'] },
+                { name: 'Cloud and Storage', items: ['AWS S3', 'Azure', 'Oracle'] },
+                { name: 'Code versioning', items: ['GitHub', 'GitLab', 'Code Commit'] },
+                { name: 'Project Management', items: ['Jira', 'Figma', 'Monday', 'Trello'] },
+                { name: 'Geospatial Tools', items: ['Folium'] }
+            ],
+            certifications: [
+                'Cientista de Dados 4.0 | Data Science Academy (in progress)',
+                'Lean Six Sigma Green Belt | FM2S',
+                'Data Science: Análise e Visualização de Dados | Alura',
+                'Pandas | Alura',
+                'Excel Impressionador | Hashtag Treinamentos',
+                'Modelagem de Banco de Dados | CEPERJ',
+                'Noções de Administração Pública | CEPERJ',
+                'Diretor de projetos empresa junior | IBMEC Soluções'
+            ],
+            languages: [
+                'Portuguese | Native',
+                'English | Advanced',
+                'Spanish | Intermediate'
+            ]
         },
         footer: {
             rights: '&copy; 2026 <span class="rainbow-text" style="font-weight:bold;">Pedro Augusto Ribeiro</span>. Built with Vite & Three.js.'

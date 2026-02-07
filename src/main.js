@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     const app = document.getElementById('app');
     let lang = localStorage.getItem('lang');
-    if (lang !== 'en' && lang !== 'pt') {
-      lang = 'pt';
+    if (!lang) {
+      lang = 'en';
     }
 
     // Render Navbar
