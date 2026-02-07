@@ -17,18 +17,16 @@
   --spacing-xl: 64px;
 
   --transition-speed: 0.3s;
-  --rainbow-gradient: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff8c00,
-    #ffd700,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #8a2be2,
-    #ff00ff,
-    #ff0000
-  );
+  --rainbow-gradient: linear-gradient(90deg,
+      #ff0000,
+      #ff8c00,
+      #ffd700,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #8a2be2,
+      #ff00ff,
+      #ff0000);
 
   --nav-bg: rgba(13, 17, 23, 0.85);
 
@@ -64,12 +62,10 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   background-image:
-    radial-gradient(at 0% 0%, rgba(100, 255, 218, 0.05) 0px, transparent 50%),
-    radial-gradient(
-      at 100% 100%,
+    radial-gradient(at 0% 0%, rgba(255, 0, 0, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%,
       rgba(138, 43, 226, 0.05) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     var(--bg-pattern);
   background-size:
     100% 100%,
@@ -121,7 +117,8 @@ button {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--spacing-lg); /* Increased from md (16px) to lg (32px) for more room */
+    padding: 0 var(--spacing-lg);
+    /* Increased from md (16px) to lg (32px) for more room */
   }
 }
 
@@ -157,7 +154,7 @@ button {
 }
 
 /* Staggered Children Logic */
-.stagger-reveal > * {
+.stagger-reveal>* {
   opacity: 0;
   transform: translateY(30px);
   transition:
@@ -166,40 +163,40 @@ button {
 }
 
 /* Works if the stagger-reveal itself is revealed OR if it's inside a revealed parent */
-.reveal-visible .stagger-reveal > *,
-.stagger-reveal.reveal-visible > * {
+.reveal-visible .stagger-reveal>*,
+.stagger-reveal.reveal-visible>* {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Generate staggered delays */
-.reveal-visible .stagger-reveal > *:nth-child(1),
-.stagger-reveal.reveal-visible > *:nth-child(1) {
+.reveal-visible .stagger-reveal>*:nth-child(1),
+.stagger-reveal.reveal-visible>*:nth-child(1) {
   transition-delay: 0.1s;
 }
 
-.reveal-visible .stagger-reveal > *:nth-child(2),
-.stagger-reveal.reveal-visible > *:nth-child(2) {
+.reveal-visible .stagger-reveal>*:nth-child(2),
+.stagger-reveal.reveal-visible>*:nth-child(2) {
   transition-delay: 0.2s;
 }
 
-.reveal-visible .stagger-reveal > *:nth-child(3),
-.stagger-reveal.reveal-visible > *:nth-child(3) {
+.reveal-visible .stagger-reveal>*:nth-child(3),
+.stagger-reveal.reveal-visible>*:nth-child(3) {
   transition-delay: 0.3s;
 }
 
-.reveal-visible .stagger-reveal > *:nth-child(4),
-.stagger-reveal.reveal-visible > *:nth-child(4) {
+.reveal-visible .stagger-reveal>*:nth-child(4),
+.stagger-reveal.reveal-visible>*:nth-child(4) {
   transition-delay: 0.4s;
 }
 
-.reveal-visible .stagger-reveal > *:nth-child(5),
-.stagger-reveal.reveal-visible > *:nth-child(5) {
+.reveal-visible .stagger-reveal>*:nth-child(5),
+.stagger-reveal.reveal-visible>*:nth-child(5) {
   transition-delay: 0.5s;
 }
 
-.reveal-visible .stagger-reveal > *:nth-child(6),
-.stagger-reveal.reveal-visible > *:nth-child(6) {
+.reveal-visible .stagger-reveal>*:nth-child(6),
+.stagger-reveal.reveal-visible>*:nth-child(6) {
   transition-delay: 0.6s;
 }
 
@@ -237,18 +234,16 @@ button {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff8c00,
-    #ffd700,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #8a2be2,
-    #ff00ff,
-    #ff0000
-  );
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff8c00,
+      #ffd700,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #8a2be2,
+      #ff00ff,
+      #ff0000);
   background-size: 400% 400%;
   border-radius: 8px;
   z-index: -1;
@@ -317,17 +312,15 @@ a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff8c00,
-    #ffd700,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #8a2be2,
-    #ff00ff
-  );
+  background: linear-gradient(90deg,
+      #ff0000,
+      #ff8c00,
+      #ffd700,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #8a2be2,
+      #ff00ff);
   background-size: 200% 100%;
   transition: width 0.3s ease;
   animation: rainbowSlide 3s linear infinite;
@@ -358,6 +351,7 @@ a:hover {
 }
 
 @keyframes rainbowGlow {
+
   0%,
   100% {
     text-shadow:
@@ -433,7 +427,12 @@ a:hover {
 
 .resume-item .company {
   font-size: 0.9rem;
-  color: var(--accent-color);
+  background: var(--rainbow-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowSlide 4s linear infinite;
   font-family: var(--font-mono);
   display: block;
   margin-bottom: 12px;
@@ -453,7 +452,7 @@ a:hover {
 .skill-group .tag {
   font-size: 0.8rem;
   padding: 4px 10px;
-  background: rgba(100, 255, 218, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   border-radius: 4px;
   color: var(--text-secondary);
@@ -531,7 +530,8 @@ a:hover {
 
   /* Section padding adjustments for mobile */
   .section {
-    padding: var(--spacing-xl) 0; /* More padding between sections */
+    padding: var(--spacing-xl) 0;
+    /* More padding between sections */
   }
 
   h1,

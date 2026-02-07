@@ -34,7 +34,9 @@ export function renderNavbar(lang, translations) {
   themeToggle.title = 'Toggle Light/Dark Mode';
 
   themeToggle.addEventListener('mouseenter', () => {
-    themeToggle.style.background = 'rgba(100, 255, 218, 0.1)';
+    themeToggle.style.background = 'linear-gradient(90deg, rgba(255, 0, 0, 0.1), rgba(0, 255, 0, 0.1), rgba(0, 0, 255, 0.1))';
+    themeToggle.style.backgroundSize = '200% 200%';
+    themeToggle.style.animation = 'rainbowSlide 2s linear infinite';
   });
   themeToggle.addEventListener('mouseleave', () => {
     themeToggle.style.background = 'transparent';
@@ -107,7 +109,7 @@ export function renderNavbar(lang, translations) {
     a.textContent = link.name;
     a.style.fontSize = '0.9rem';
     a.style.fontFamily = 'var(--font-mono)';
-    
+
     // Close menu on link click (for mobile)
     a.addEventListener('click', () => {
       ul.classList.remove('active');

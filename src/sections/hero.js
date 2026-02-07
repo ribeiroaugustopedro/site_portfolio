@@ -101,7 +101,9 @@ export function renderHero(lang, translations) {
     btn.innerHTML = `${contact.icon} <span>${contact.label}</span>`;
 
     btn.addEventListener('mouseenter', () => {
-      btn.style.background = 'rgba(100, 255, 218, 0.1)';
+      btn.style.background = 'linear-gradient(90deg, rgba(255, 0, 0, 0.1), rgba(0, 255, 0, 0.1), rgba(0, 0, 255, 0.1))';
+      btn.style.backgroundSize = '200% 200%';
+      btn.style.animation = 'rainbowSlide 2s linear infinite';
       btn.style.transform = 'translateY(-2px)';
     });
 

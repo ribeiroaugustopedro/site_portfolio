@@ -1,0 +1,170 @@
+h1,
+h2,
+h3 {
+  /* color managed via Python */
+}
+
+/* === Expander Customizado === */
+.streamlit-expanderHeader {
+  font-weight: bold;
+}
+
+/* === Popup do Mapa === */
+.popup-hosp {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* === Botão Streamlit customizado (IA futura) === */
+button[kind="primary"] {
+  background-color: #fc4c02 !important;
+  border-color: #fc4c02 !important;
+}
+
+/* === Dashboard Cards === */
+.dashboard-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* Sombra mais suave */
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+  min-height: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  /* Prevent content from leaking */
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  /* Slightly smaller base font */
+  font-weight: 700;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-subtext {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.2rem;
+}
+
+/* === Dark Mode Support === */
+[data-theme="dark"] .titulo-coluna,
+[data-theme="dark"] .contador-hosp {
+  color: #fafafa !important;
+}
+
+[data-theme="dark"] .card-title {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .card-subtext {
+  color: #808080 !important;
+}
+
+[data-theme="dark"] .dashboard-card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+
+[data-theme="dark"] .card-opcoes {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #fc4c02 !important;
+}
+
+[data-theme="dark"] .streamlit-expanderHeader {
+  color: #fc4c02 !important;
+}
+
+/* .card-value color managed via Python */
+
+[data-theme="dark"] button[kind="primary"] {
+  background-color: #fc4c02 !important;
+  border-color: #fc4c02 !important;
+}
+
+/* Ensure multiselect and other inputs are readable in dark mode */
+[data-theme="dark"] .stMultiSelect label,
+[data-theme="dark"] .stSelectbox label,
+[data-theme="dark"] .stSlider label,
+[data-theme="dark"] .stCheckbox label {
+  color: #fafafa !important;
+}
+
+/* === AI Assistant Styling === */
+.stChatFloatingInputContainer {
+    bottom: 20px;
+}
+
+[data-testid="stChatMessage"] {
+    background-color: transparent !important;
+    padding: 1rem 0;
+}
+
+/* Assistant Bubble */
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageContent"]):has(div[aria-label="assistant"]) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* User Bubble */
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageContent"]):has(div[aria-label="user"]) {
+    background-color: #f8f9fa !important;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+[data-theme="dark"] [data-testid="stChatMessage"]:has(div[aria-label="assistant"]) {
+    border-bottom: 1px solid #333;
+}
+
+[data-theme="dark"] [data-testid="stChatMessage"]:has(div[aria-label="user"]) {
+    background-color: #1e1e1e !important;
+    border-color: #444;
+}
+
+.ai-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fc4c02;
+}
+
+.ai-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+[data-theme="dark"] .ai-subtitle {
+    color: #aaa;
+}

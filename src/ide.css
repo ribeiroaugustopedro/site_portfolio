@@ -224,7 +224,17 @@
 }
 
 .ide-file-item.active {
-  background: rgba(100, 255, 218, 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 140, 0, 0.1),
+    rgba(255, 215, 0, 0.1),
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 255, 255, 0.1),
+    rgba(0, 0, 255, 0.1),
+    rgba(138, 43, 226, 0.1),
+    rgba(255, 0, 255, 0.1)
+  );
   color: var(--ide-text-bright);
 }
 
